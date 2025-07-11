@@ -2,9 +2,9 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 
 module.exports = [
   {
-    path: "/task-manager",
+    path: "/",
     middleware: createProxyMiddleware({
-      target: process.env.TASK_MANAGER_URL,
+      target: process.env.LANDING_URL,
       changeOrigin: true,
     }),
   },
